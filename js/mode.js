@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function enableLightMode() {
         document.body.classList.add('light-mode');
-        themeIcon.classList.replace('bx-moon', 'bx-sun');
+        themeIcon.classList.replace('bx-sun', 'bx-moon');
         localStorage.setItem('theme', 'light');
 
         // Dynamically load light.css
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function disableLightMode() {
         document.body.classList.remove('light-mode');
-        themeIcon.classList.replace('bx-sun', 'bx-moon');
+        themeIcon.classList.replace('bx-moon', 'bx-sun');
         localStorage.setItem('theme', 'dark');
 
         // Remove light.css
