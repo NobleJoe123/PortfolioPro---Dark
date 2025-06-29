@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeIcon = document.getElementById('theme-icon');
     const lightModeStylesheetId = 'light-mode-stylesheet';
 
-    // Check saved theme preference
+    
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         enableLightMode();
@@ -27,11 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const link = document.createElement('link');
             link.id = lightModeStylesheetId;
             link.rel = 'stylesheet';
-            link.href = 'css/light.css'; // Adjust the path if necessary
+            link.href = 'css/light.css';
             document.head.appendChild(link);
         }
 
-        // Replace images for light mode
         replaceImages('light');
     }
 
@@ -40,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
         themeIcon.classList.replace('bx-moon', 'bx-sun');
         localStorage.setItem('theme', 'dark');
 
-        // Remove light.css
+    
         const lightStylesheet = document.getElementById(lightModeStylesheetId);
         if (lightStylesheet) {
             lightStylesheet.remove();
         }
 
-        // Replace images for dark mode
+        
         replaceImages('dark');
     }
 
