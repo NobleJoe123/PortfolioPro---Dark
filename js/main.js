@@ -310,28 +310,28 @@
 }());
 
 
-document.getElementById('contact-form').addEventListener('submit', async function (e) {
-	e.preventDefault();
+// document.getElementById('contact-form').addEventListener('submit', async function (e) {
+// 	e.preventDefault();
 
-	const name = document.getElementById('name').value;
-	const email = document.getElementById('email').value;
-	const subject = document.getElementById('subject').value;
-	const message = document.getElementById('message').value;
+// 	const name = document.getElementById('name').value;
+// 	const email = document.getElementById('email').value;
+// 	const subject = document.getElementById('subject').value;
+// 	const message = document.getElementById('message').value;
 
-	try {
-		const response = await fetch('http://localhost:3000/send-email', { // Replace with your backend URL
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ name, email, subject, message }),
-		});
+// 	try {
+// 		const response = await fetch('http://localhost:3000/send-email', { // Replace with your backend URL
+// 			method: 'POST',
+// 			headers: { 'Content-Type': 'application/json' },
+// 			body: JSON.stringify({ name, email, subject, message }),
+// 		});
 
-		if (response.ok) {
-			alert('Message sent successfully!');
-		} else {
-			alert('Failed to send message.');
-		}
-	} catch (error) {
-		console.error(error);
-		alert('An error occurred.');
-	}
-});
+// 		if (response.ok) {
+// 			alert('Message sent successfully!');
+// 		} else {
+// 			alert('Failed to send message.');
+// 		}
+// 	} catch (error) {
+// 		console.error(error);
+// 		alert('An error occurred.');
+// 	}
+// });
